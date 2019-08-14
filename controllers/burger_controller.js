@@ -14,7 +14,7 @@ app.get("/all",function(req,res){
 
 app.post("/add", function(req,res){
     var newBurger = req.body;
-    burger.create("burger_name","devoured",newBurger.name,newBurger.devoured,
+    burger.create("burger_name",newBurger.name,
     function(data){
         res.redirect("/all");
     })
@@ -23,7 +23,7 @@ app.post("/add", function(req,res){
 app.put("/update/:id",function(req,res){
     var burgerId = req.params.id;
 
-    burger.update("burger_name","devoured",req.body.name,req.body.devoured,burgerId,
+    burger.update("devoured",req.body.devoured,req.body.name,
     function(data){
         res.status(200).end();
     })

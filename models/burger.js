@@ -6,18 +6,16 @@ var burgers = {
             cb(data);
         });
     },
-    create : function(col1Name,col2Name,col1Value,col2Value,cb){
-        orm.insertOne("burgers",col1Name,col2Name,col1Value,col2Value,function(data){
+    create : function(colName,colValue,cb){
+        orm.insertOne("burgers",colName,colValue,function(data){
                 cb(data);
         } );
     },
-    update : function(col1Name,col2Name,col1Value,col2Value,id,cb){
-        orm.updateOne("burgers",col1Name,col2Name,col1Value,col2Value,id,function(data){
+    update : function(colName,colValue,cb){
+        orm.updateOne("burgers",colName,colValue,id,function(data){
                 cb(data);
         } );
     }
-    
-
 }
 
 

@@ -10,20 +10,20 @@ var orm = {
             cb(data);
         })
     },
-    insertOne : function(tableName,col1Name,col2Name,col1Value,col2Value,cb){
-        var sqlQuery = "insert into ?? (??,??) values (??, ??)";
+    insertOne : function(tableName,colName,colValue,cb){
+        var sqlQuery = "insert into ?? (??) values (??)";
         connection.query(sqlQuery,
-            [tableName,col1Name,col2Name,col1Value,col2Value],
+            [tableName,colName,colValue],
             function(err,data){
                 if(err) throw err;
                 console.log(data);
                 cb(data);
             });
     },
-    updateOne : function(tableName,col1Name,col2Name,col1Value,col2Value,id,cb){
-        var sqlQuery = "updated ?? set ?? = ?? , ?? = ?? where id = ??";
+    updateOne : function(tableName,colName,colValue,cb){
+        var sqlQuery = "updated ?? set devoured = ?? where burger_name = ??";
         connection.query(sqlQuery,
-            [tableName,col1Name,col1Value,col2Name,col2Value],
+            [tableName,colName,colValue],
             function(err,data){
                 if(err) throw err;
                 console.log(data);
