@@ -29,13 +29,4 @@ app.put("/update/:id",function(req,res){
     })
 })
 
-
-
-
-
-
-
-
-
-
 module.exports = app;
