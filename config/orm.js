@@ -20,10 +20,10 @@ var orm = {
                 cb(data);
             });
     },
-    updateOne : function(tableName,colName,colValue,cb){
-        var sqlQuery = "updated ?? set devoured = ?? where burger_name = ??";
+    updateOne : function(tableName,colValue,id,cb){
+        var sqlQuery = "updated ?? set devoured = ?? where id = ??";
         connection.query(sqlQuery,
-            [tableName,colName,colValue],
+            [tableName,colValue,id],
             function(err,data){
                 if(err) throw err;
                 console.log(data);
