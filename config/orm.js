@@ -20,8 +20,8 @@ var orm = {
                 cb(data);
             });
     },
-    updateOne : function(tableName,col1Name,col2Name,col1Value,col2Value,cb){
-        var sqlQuery = "updated ?? set ?? = ?? , ?? = ?? where ?? = ??";
+    updateOne : function(tableName,col1Name,col2Name,col1Value,col2Value,id,cb){
+        var sqlQuery = "updated ?? set ?? = ?? , ?? = ?? where id = ??";
         connection.query(sqlQuery,
             [tableName,col1Name,col1Value,col2Name,col2Value],
             function(err,data){
