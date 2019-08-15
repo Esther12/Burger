@@ -18,7 +18,9 @@ $(function() {
         event.preventDefault();
         var burgerId = $(this).attr("data-id");
 
-        var newStatus = { devoured : $(this).attr("data-status")};
+        var newStatus = { devoured : $(this).attr("data-status"),
+                            id : burgerId};
+        console.log(burgerId,newStatus);
         $.ajax("/update/" + burgerId, {
             type: "PUT",
             data: newStatus

@@ -21,7 +21,8 @@ var orm = {
             });
     },
     updateOne : function(tableName,colValue,id,cb){
-        var sqlQuery = "updated ?? set devoured = ?? where id = ??";
+        console.log(tableName,colValue,id);
+        var sqlQuery = "updated ?? set devoured = ? where id = ?";
         connection.query(sqlQuery,
             [tableName,colValue,id],
             function(err,data){

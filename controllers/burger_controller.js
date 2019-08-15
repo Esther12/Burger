@@ -15,16 +15,15 @@ router.get("/",function(req,res){
 router.post("/add", function(req,res){
     var newBurger = req.body;
     console.log("add",newBurger);
-    burger.create("burger_name",newBurger.burger_name,
+    burger.create(newBurger.burger_name,
     function(data){
         res.json({id : data.id});
     })
 })
 
 router.put("/update/:id",function(req,res){
-    var burgerId = Number(req.params.id);
-    console.log("updata" + req.body.devoured + burgerId);
-    burger.update("burgers",req.body.devoured,burgerId,
+    console.log("update : " + req.body.devoured + req.body.id);
+    burger.update(req.body.devoured,Number(req.body.id),
     function(data){
         res.status(200).end();
     })
