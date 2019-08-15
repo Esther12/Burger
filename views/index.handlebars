@@ -11,9 +11,9 @@
 
 <div class="card" style="width: 18rem;">
     {{#each burgers}}
-        {{#if devoured}}
+        {{#unless devoured}}
             {{> burgers/burger-block devoured=flase}}
-        {{/if}}
+        {{/unless}}
   {{/each}}
 </div>
 

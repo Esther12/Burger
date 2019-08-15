@@ -23,7 +23,7 @@ router.post("/add", function(req,res){
 router.put("/update/:id",function(req,res){
     var burgerId = req.params.id;
 
-    burger.update("devoured",req.body.devoured,burgerId,
+    burger.update("burgers",req.body.devoured,burgerId,
     function(data){
         res.status(200).end();
     })
