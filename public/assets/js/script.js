@@ -4,6 +4,7 @@ $(function() {
     $("#submit").on("click",function(event){
         event.preventDefault();
         var newBurger = {burger_name : $("#exampleFormControlInput1").val()};
+        console.log("Add New burger" + newBurger.burger_name);
         $.ajax("/add", {
             type: "POST",
             data: newBurger
