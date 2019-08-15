@@ -11,7 +11,7 @@ var orm = {
         })
     },
     insertOne : function(tableName,colName,colValue,cb){
-        var sqlQuery = "insert into ?? (??) values (??)";
+        var sqlQuery = "insert into ?? (??) values (?)";
         connection.query(sqlQuery,
             [tableName,colName,colValue],
             function(err,data){
@@ -22,7 +22,7 @@ var orm = {
     },
     updateOne : function(tableName,colValue,id,cb){
         console.log(tableName,colValue,id);
-        var sqlQuery = "updated ?? set devoured = ? where id = ?";
+        var sqlQuery = "update ?? set devoured = ? where id = ?";
         connection.query(sqlQuery,
             [tableName,colValue,id],
             function(err,data){

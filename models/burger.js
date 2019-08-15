@@ -12,6 +12,7 @@ var burgers = {
         } );
     },
     update : function(colValue,id,cb){
+        console.log(colValue,id);
         orm.updateOne("burgers",colValue,id,function(data){
                 cb(data);
         } );

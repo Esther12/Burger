@@ -1,22 +1,28 @@
-
+<div class="row">
+<div class="col-6">
+{{#each burgers}}
 <div class="card" style="width: 18rem;">
-    {{#each burgers}}
+    
         {{#if devoured}}
-            {{> burgers/burger-block devoured=true}}
+            {{> burgers/burger-block devoured=0}}
         {{/if}}
-  {{/each}}
+</div>
+{{/each}}
 </div>
 
-<hr>
-
+<div class="col-6">
+{{#each burgers}}
 <div class="card" style="width: 18rem;">
-    {{#each burgers}}
+    
         {{#unless devoured}}
-            {{> burgers/burger-block devoured=flase}}
+            {{> burgers/burger-block devoured=1}}
         {{/unless}}
-  {{/each}}
+ 
 </div>
-
+ {{/each}}
+</div>
+</div>
+<hr>
 <form>
      <div class="form-group">
         <label for="exampleFormControlInput1">Burger Name : </label>
