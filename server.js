@@ -1,6 +1,6 @@
 var express = require("express");
 
-var PORT = process.nextTick.PORT || 3030;
+var PORT = process.nextTick.PORT || 3002;
 
 var app = express();
 

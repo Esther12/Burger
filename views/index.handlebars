@@ -2,7 +2,7 @@
 <div class="card" style="width: 18rem;">
     {{#each burgers}}
         {{#if devoured}}
-            {{ > burgers/burger devoured=true}}
+            {{> burgers/burger-block devoured=true}}
         {{/if}}
   {{/each}}
 </div>
@@ -12,7 +12,7 @@
 <div class="card" style="width: 18rem;">
     {{#each burgers}}
         {{#if devoured}}
-            {{ > burgers/burger devoured=flase}}
+            {{> burgers/burger-block devoured=flase}}
         {{/if}}
   {{/each}}
 </div>
