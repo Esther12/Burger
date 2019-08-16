@@ -4,12 +4,12 @@ var burger = require("../models/burger");
 var router = express.Router();
 
 router.get("/",function(req,res){
-    // burger.all(function(data){
-    //     var burgersObj ={
-    //         burgers : data    
-    //     };
-    //     res.render("index",burgersObj);
-    // });
+    burger.all(function(data){
+        var burgersObj ={
+            burgers : data    
+        };
+        res.render("index",burgersObj);
+    });
 });
 
 router.post("/add", function(req,res){
